@@ -216,13 +216,27 @@ section { position: relative; padding-block: var(--space-section); }
   display: flex; align-items: center; justify-content: space-between; gap: 1.25rem; height: 4.5rem;
 }
 .brand-logo {
-  font-family: var(--font-display); font-weight: 800; font-size: 1.15rem;
-  letter-spacing: -0.01em; color: var(--ink); display: flex; align-items: center; gap: 0.45rem;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
 }
-.brand-logo .logo-badge {
-  display: inline-grid; place-items: center; width: 1.9rem; height: 1.9rem; border-radius: 8px;
-  background: linear-gradient(135deg, var(--accent), var(--cyan)); color: #fff;
-  font-size: 0.8rem; font-weight: 800;
+.brand-logo:hover {
+  opacity: 0.92;
+  transform: translateY(-1px);
+}
+.brand-logo-img {
+  height: 44px;
+  width: auto;
+  max-width: 140px;
+  object-fit: contain;
+  display: block;
+}
+@media (max-width: 600px) {
+  .brand-logo-img {
+    height: 38px;
+    max-width: 120px;
+  }
 }
 .nav-links { display: none; gap: 0.35rem; align-items: center; }
 @media (min-width: 920px) {
